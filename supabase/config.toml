@@ -1,0 +1,11 @@
+
+project_id = "dppjfqblgeocraduavor"
+
+[functions.generate-toc]
+verify_jwt = true
+
+[functions.check-gemini-key]
+verify_jwt = true
+
+[functions.generate-biography-draft]
+verify_jwt = true

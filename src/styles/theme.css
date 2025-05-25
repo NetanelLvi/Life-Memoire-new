@@ -1,0 +1,28 @@
+
+:root {
+  --memoir-yellow: #FFD217;
+  --memoir-blueGray: #5B9AA0;
+  --memoir-darkGray: #333333;
+  --memoir-white: #FFFFFF;
+}
+
+/* Custom styling for primary button */
+.primary-button {
+  background-color: var(--memoir-yellow) !important;
+  color: var(--memoir-darkGray) !important;
+}
+
+.primary-button:hover {
+  background-color: #f8ca00 !important;
+}
+
+/* Custom styling for secondary button */
+.secondary-button {
+  color: var(--memoir-darkGray) !important;
+  border-color: var(--memoir-blueGray) !important;
+}
+
+.secondary-button:hover {
+  background-color: var(--memoir-blueGray) !important;
+  color: white !important;
+}
