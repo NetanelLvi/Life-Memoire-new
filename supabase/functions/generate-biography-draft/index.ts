@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { initSupabaseClient } from "../_shared/supabase-client.ts";
 import { corsHeaders } from "../_shared/cors.ts";
@@ -26,8 +25,14 @@ interface TOCChapter {
   description: string;
 }
 
+// Helper to escape special characters for regex
+function escapeRegExp(string: string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
+
 serve(async (req) => {
   console.log("[MAIN] Starting generate-biography-draft function");
+  console.log(`[MAIN] Request method: ${req.method}`);
 
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {

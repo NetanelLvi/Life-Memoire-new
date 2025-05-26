@@ -111,7 +111,9 @@ const DraftViewer = ({ biographyId, editorChapters, onUpdateChapter, onCloseModa
       return errorAlert;
     }
 
-    const chapters = Object.keys(draft.chapter_content);
+    const chapters = draft.chapter_content && typeof draft.chapter_content === 'object'
+      ? Object.keys(draft.chapter_content)
+      : [];
     return (
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="w-full overflow-x-auto">

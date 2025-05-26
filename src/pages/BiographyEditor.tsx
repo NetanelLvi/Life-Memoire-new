@@ -335,6 +335,7 @@ const BiographyEditor = () => {
                 chapter={activeChapter} 
                 onSave={saveChapter}
                 onSaveSuccess={handleSaveSuccess}
+                onOpenDraftModal={handleViewDraft} // Pass the function to open the draft modal
               />
             ) : (
               <Card className="p-6 text-center">
